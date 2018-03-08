@@ -61,4 +61,13 @@ groups:
       summary: "hipcms/angularapp:test down"
       description: "hipcms/angularapp:test is down for more than 30 seconds."
 
+  - alert: userstore-develop-1.develop.3899643f_down
+    expr: absent(container_memory_usage_bytes{name="userstore-develop-1.develop.3899643f"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/userstore:test down"
+      description: "hipcms/userstore:test is down for more than 30 seconds."
+
   
