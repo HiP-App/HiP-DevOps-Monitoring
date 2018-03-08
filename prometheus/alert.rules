@@ -106,6 +106,13 @@ groups:
       summary: "dockercloud/network-daemon down"
       description: "dockercloud/network-daemon:1.11.2-cs5 container is down for more than 30 seconds."
       
-    
+  - alert: hipcms/datastore:latest
+    expr: absent(container_memory_usage_bytes{name="datastore-public-1.b2bcdce3"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:latest"
+      description: "hipcms/datastore:latest container is down for more than 30 seconds."
 
   
