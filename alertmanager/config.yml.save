@@ -1,0 +1,10 @@
+route:
+    receiver: 'mattermost'
+
+receivers:
+    - name: 'mattermost'
+      slack_configs:
+            send_resolved: true
+            text: "{{ .CommonAnnotations.description }}
+            channel: 'DevOps_Alert'
+            api_url: 'https://mattermost-hip.cs.upb.de/hooks/hdfh39we3tdumf5hb8gmascngy'
