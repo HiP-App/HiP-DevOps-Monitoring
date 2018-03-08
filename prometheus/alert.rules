@@ -141,7 +141,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/datastore:staging"
-      description: "datastore-staging-1.Staging.9fdc5750 container is down for more than 30 seconds."
+      description: "hipcms/datastore:staging container is down for more than 30 seconds."
       
     - alert: hipcms/thumbnailservice:staging
     expr: absent(container_memory_usage_bytes{name="thumbnailservice-staging-1.Staging.979a82f1"})
@@ -150,7 +150,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/thumbnailservice:staging"
-      description: "thumbnailservice-staging-1.Staging.979a82f1 container is down for more than 30 seconds."
+      description: "hipcms/thumbnailservice:staging container is down for more than 30 seconds."
       
     - alert: hipcms/angularapp:staging
     expr: absent(container_memory_usage_bytes{name="angularapp-staging-1.Staging.8da2297d"})
@@ -159,7 +159,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/angularapp:staging"
-      description: "angularapp-staging-1.Staging.8da2297d container is down for more than 30 seconds."
+      description: "hipcms/angularapp:staging container is down for more than 30 seconds."
       
     - alert: hipcms/userstore:staging
     expr: absent(container_memory_usage_bytes{name="userstore-staging-1.Staging.93a7256f"})
@@ -168,6 +168,15 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:staging"
-      description: "userstore-staging-1.Staging.93a7256f container is down for more than 30 seconds."
+      description: "hipcms/userstore:staging container is down for more than 30 seconds."
+      
+    - alert: hipcms/featuretoggle:docker-fix-public
+    expr: absent(container_memory_usage_bytes{name="featuretoggle-public-1.68ae5556"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/featuretoggle:docker-fix-public"
+      description: "hipcms/featuretoggle:docker-fix-public container is down for more than 30 seconds."
 
   
