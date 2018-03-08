@@ -97,6 +97,15 @@ groups:
       summary: "hipcms/achievements:test down"
       description: "hipcms/achievements:test container is down for more than 30 seconds."
       
+ - alert: dockercloud/network-daemon:1.11.2-cs5
+    expr: absent(container_memory_usage_bytes{name="weave-98256.e8076aa3"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/network-daemon:1.11.2-cs5 down"
+      description: "dockercloud/network-daemon:1.11.2-cs5 container is down for more than 30 seconds."
+      
     
 
   
