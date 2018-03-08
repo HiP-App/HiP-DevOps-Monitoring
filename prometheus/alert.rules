@@ -178,5 +178,130 @@ groups:
     annotations:
       summary: "hipcms/featuretoggle:docker-fix-public"
       description: "hipcms/featuretoggle:docker-fix-public container is down for more than 30 seconds."
+      
+    - alert: hipcms/thumbnailservice:latest
+    expr: absent(container_memory_usage_bytes{name="thumbnailservice-public-1.2c741d25"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:latest"
+      description: "hipcms/thumbnailservice:latest container is down for more than 30 seconds."
+      
+    - alert: hipcms/angularapp:latest
+    expr: absent(container_memory_usage_bytes{name="angularapp-public-1.b2497a68"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/angularapp:latest"
+      description: "hipcms/angularapp:latest container is down for more than 30 seconds."
+      
+    - alert: hipcms/achievements:latest
+    expr: absent(container_memory_usage_bytes{name="achievements-public-1.f6b9bc48"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/achievements:latest"
+      description: "hipcms/achievements:latest container is down for more than 30 seconds."
+      
+    
+    - alert: hipcms/userstore:latest
+    expr: absent(container_memory_usage_bytes{name="userstore-public-1.dbea0ad5"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/userstore:latest"
+      description: "achievements-public-1.f6b9bc48 container is down for more than 30 seconds."
+      
+    
+    - alert: hipcms/cmsapi:latest
+    expr: absent(container_memory_usage_bytes{name="cmsapi-public-1.7a6d7f87"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/cmsapi:latest"
+      description: "hipcms/cmsapi:latest container is down for more than 30 seconds."
+      
+    - alert: hipcms/emailservice:latest
+    expr: absent(container_memory_usage_bytes{name="emailservice-public-1.a2d4b9c1"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/emailservice:latest"
+      description: "hipcms/emailservice:latest container is down for more than 30 seconds."
+      
+    - alert: postgres:10.1
+    expr: absent(container_memory_usage_bytes{name="postgres-public-1.4eacf3f4"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "postgres:10.1"
+      description: "postgres:10.1 container is down for more than 30 seconds."
+      
+      
+    - alert: hipcms/emailservice:develop
+    expr: absent(container_memory_usage_bytes{name="emailservice-develop-1.develop.31b4819d"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/emailservice:develop"
+      description: "hipcms/emailservice:develop container is down for more than 30 seconds."
+      
+      
+    - alert: hipcms/featuretoggle:docker-fix
+    expr: absent(container_memory_usage_bytes{name="featuretoggle-develop-1.5696bf8f"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/featuretoggle:docker-fix"
+      description: "hipcms/featuretoggle:docker-fix container is down for more than 30 seconds."
+      
+    - alert: dockercloud/cleanup:latest
+    expr: absent(container_memory_usage_bytes{name="cleanup-22857.233fcf80"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/cleanup:latest"
+      description: "dockercloud/cleanup:latest container is down for more than 30 seconds."
+      
+    - alert: dockercloud/logrotate:latest
+    expr: absent(container_memory_usage_bytes{name="logrotate-87522.5e460535"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/logrotate:latest"
+      description: "dockercloud/logrotate:latest container is down for more than 30 seconds."
+      
+      
+    - alert: dockercloud/ntpd:latest
+    expr: absent(container_memory_usage_bytes{name="ntpd-29102.e27a3f99"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/ntpd:latest"
+      description: "dockercloud/ntpd:latest container is down for more than 30 seconds."
+      
+    
+    - alert: hipcms/thumbnailservice:staging
+    expr: absent(container_memory_usage_bytes{name="thumbnail-staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:staging"
+      description: "hipcms/thumbnailservice:staging container is down for more than 30 seconds."
+      
+    
 
   
