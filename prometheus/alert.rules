@@ -68,6 +68,106 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:test down"
-      description: "hipcms/userstore:test is down for more than 30 seconds."
+      description: "hipcms/userstore:test container is down for more than 30 seconds."
+
+  - alert: hipcms/thumbnailservice:test_down
+    expr: absent(container_memory_usage_bytes{name="thumbnailservice-develop-1.develop.531b6b27"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:test down"
+      description: "hipcms/thumbnailservice:test container is down for more than 30 seconds."
+      
+      
+  - alert: hipcms/datastore:test
+    expr: absent(container_memory_usage_bytes{name="datastore-develop-1.develop.4c0d52ad"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:test down"
+      description: "hipcms/datastore:test container is down for more than 30 seconds."
+      
+  - alert: dockercloud/network-daemon:1.11.2-cs5
+    expr: absent(container_memory_usage_bytes{name="weave-98256.e8076aa3"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/network-daemon:1.11.2-cs5 down"
+      description: "dockercloud/network-daemon:1.11.2-cs5 container is down for more than 30 seconds."
+      
+    - alert: hipcms/achievements:test
+    expr: absent(container_memory_usage_bytes{name="achievements-develop-1.develop.6d12bf7b"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/achievements:test down"
+      description: "hipcms/achievements:test container is down for more than 30 seconds."
+      
+    - alert: hipcms/datastore:latest
+    expr: absent(container_memory_usage_bytes{name="datastore-public-1.b2bcdce3"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:latest"
+      description: "hipcms/datastore:latest container is down for more than 30 seconds."
+      
+    - alert: dockercloud/events:latest
+    expr: absent(container_memory_usage_bytes{name="events-3160.dce9259e"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "dockercloud/events:latest"
+      description: "dockercloud/events:latest container is down for more than 30 seconds."
+      
+    - alert: hipcms/achievements:staging
+    expr: absent(container_memory_usage_bytes{name="achievements-staging-1.Staging.22028be0"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/achievements:staging"
+      description: "hipcms/achievements:staging container is down for more than 30 seconds."
+      
+    - alert: hipcms/datastore:staging
+    expr: absent(container_memory_usage_bytes{name="datastore-staging-1.Staging.9fdc5750"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:staging"
+      description: "datastore-staging-1.Staging.9fdc5750 container is down for more than 30 seconds."
+      
+    - alert: hipcms/thumbnailservice:staging
+    expr: absent(container_memory_usage_bytes{name="thumbnailservice-staging-1.Staging.979a82f1"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:staging"
+      description: "thumbnailservice-staging-1.Staging.979a82f1 container is down for more than 30 seconds."
+      
+    - alert: hipcms/angularapp:staging
+    expr: absent(container_memory_usage_bytes{name="angularapp-staging-1.Staging.8da2297d"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/angularapp:staging"
+      description: "angularapp-staging-1.Staging.8da2297d container is down for more than 30 seconds."
+      
+    - alert: hipcms/userstore:staging
+    expr: absent(container_memory_usage_bytes{name="userstore-staging-1.Staging.93a7256f"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/userstore:staging"
+      description: "userstore-staging-1.Staging.93a7256f container is down for more than 30 seconds."
 
   
