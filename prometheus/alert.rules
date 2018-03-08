@@ -302,6 +302,35 @@ groups:
       summary: "hipcms/thumbnailservice:staging"
       description: "hipcms/thumbnailservice:staging container is down for more than 30 seconds."
       
+      
+    - alert: weaveworks/weaveexec:1.6.2
+    expr: absent(container_memory_usage_bytes{name="weaveproxy"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "weaveworks/weaveexec:1.6.2"
+      description: "weaveworks/weaveexec:1.6.2 container is down for more than 30 seconds."
+      
+      
+    - alert: weaveworks/plugin:1.6.2
+    expr: absent(container_memory_usage_bytes{name="weaveplugin"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "weaveworks/plugin:1.6.2"
+      description: "weaveplugin container is down for more than 30 seconds."
+      
+    - alert: weaveworks/weave:1.6.2
+    expr: absent(container_memory_usage_bytes{name="weave"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "weaveworks/weave:1.6.2"
+      description: "weaveworks/weave:1.6.2 container is down for more than 30 seconds."
+      
     
 
   
