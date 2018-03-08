@@ -79,6 +79,15 @@ groups:
       summary: "hipcms/thumbnailservice:test down"
       description: "hipcms/thumbnailservice:test container is down for more than 30 seconds."
       
+  - alert: hipcms/datastore:test
+    expr: absent(container_memory_usage_bytes{name="datastore-develop-1.develop.4c0d52ad"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:test down"
+      description: "hipcms/datastore:test container is down for more than 30 seconds."
+      
     
 
   
