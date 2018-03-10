@@ -52,67 +52,13 @@ groups:
       summary: "Graylog down"
       description: "Graylog container is down for more than 30 seconds."
 
-  - alert: angularapp-develop-1.develop.b1e40a3a_down
-    expr: absent(container_memory_usage_bytes{name="angularapp-develop-1.develop.b1e40a3a"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/angularapp:test down"
-      description: "hipcms/angularapp:test is down for more than 30 seconds."
-
-  - alert: userstore-develop-1.develop.3899643f_down
-    expr: absent(container_memory_usage_bytes{name="userstore-develop-1.develop.3899643f"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/userstore:test down"
-      description: "hipcms/userstore:test container is down for more than 30 seconds."
-
-  - alert: hipcms/thumbnailservice:test_down
-    expr: absent(container_memory_usage_bytes{name="thumbnailservice-develop-1.develop.531b6b27"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/thumbnailservice:test down"
-      description: "hipcms/thumbnailservice:test container is down for more than 30 seconds."
-      
-  - alert: hipcms/datastore:test
-    expr: absent(container_memory_usage_bytes{name="datastore-develop-1.develop.4c0d52ad"})
+  - alert: hipcms/datastore:test_down
+    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
       summary: "hipcms/datastore:test down"
-      description: "hipcms/datastore:test container is down for more than 30 seconds."
-      
-  - alert: hipcms/achievements:test
-    expr: absent(container_memory_usage_bytes{name="achievements-develop-1.develop.6d12bf7b"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/achievements:test down"
-      description: "hipcms/achievements:test container is down for more than 30 seconds."
-      
-  - alert: DockerNetwork-DeamonDown
-    expr: absent(container_memory_usage_bytes{name="weave-98256.e8076aa3"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "dockercloud/network-daemon down"
-      description: "dockercloud/network-daemon:1.11.2-cs5 container is down for more than 30 seconds."
-      
-  - alert: hipcms/datastore:latest
-    expr: absent(container_memory_usage_bytes{name="datastore-public-1.b2bcdce3"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/datastore:latest"
-      description: "hipcms/datastore:latest container is down for more than 30 seconds."
+      description: "hipcms/datastore:test is down for more than 30 seconds."
 
   
