@@ -105,5 +105,23 @@ groups:
     annotations:
       summary: "hipcms/achievements:test down"
       description: "hipcms/achievements:test is down for more than 30 seconds."
+      
+  - alert: hipcms/datastore:latest
+    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:latest"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:latest down"
+      description: "hipcms/datastore:latest is down for more than 30 seconds."
+      
+  - alert: hipcms/emailservice:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:latest"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/emailservice:staging down"
+      description: "hipcms/emailservice:staging is down for more than 30 seconds."
 
   
