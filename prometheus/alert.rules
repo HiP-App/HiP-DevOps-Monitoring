@@ -141,5 +141,14 @@ groups:
     annotations:
       summary: "hipcms/datastore:staging down"
       description: "hipcms/datastore:staging is down for more than 30 seconds."
+      
+  - alert: hipcms/thumbnailservice:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:staging down"
+      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
 
   
