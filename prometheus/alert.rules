@@ -69,5 +69,14 @@ groups:
     annotations:
       summary: "hipcms/angularapp:test down"
       description: "hipcms/angularapp:test is down for more than 30 seconds."
+      
+  - alert: hipcms/userstore:test_down
+    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:test"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/userstore:test down"
+      description: "hipcms/userstore:test is down for more than 30 seconds."
 
   
