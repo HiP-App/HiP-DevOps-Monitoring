@@ -150,5 +150,14 @@ groups:
     annotations:
       summary: "hipcms/thumbnailservice:staging down"
       description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
+      
+  - alert: hipcms/angularapp:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/angularapp:staging down"
+      description: "hipcms/angularapp:staging is down for more than 30 seconds."
 
   
