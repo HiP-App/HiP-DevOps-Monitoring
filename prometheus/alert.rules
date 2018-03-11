@@ -321,3 +321,12 @@ groups:
     annotations:
       summary: "hipcms/featuretoggle:docker-fix-public down"
       description: "hipcms/featuretoggle:docker-fix-public is down for more than 30 seconds."
+
+  - alert: hipcms/emailservice:latest
+    expr: absent(container_memory_usage_bytes{image="hipcms/emailservice:latest"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/emailservice:latest down"
+      description: "hipcms/emailservice:latest is down for more than 30 seconds."
