@@ -312,3 +312,12 @@ groups:
     annotations:
       summary: "hipcms/thumbnailservice:staging down"
       description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
+
+  - alert: hipcms/featuretoggle:docker-fix-public
+    expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix-public"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/featuretoggle:docker-fix-public down"
+      description: "hipcms/featuretoggle:docker-fix-public is down for more than 30 seconds."
