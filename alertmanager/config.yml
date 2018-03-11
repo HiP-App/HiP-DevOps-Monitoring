@@ -1,8 +1,8 @@
 route:
-    receiver: 'slack'
+    receiver: 'mattermost'
 
 receivers:
-    - name: 'slack'
+    - name: 'mattermost'
       slack_configs:
           - send_resolved: true
             text: "{{ .CommonAnnotations.description }}"
