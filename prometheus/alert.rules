@@ -286,15 +286,6 @@ groups:
       summary: "hipcms/cmsapi:develop down"
       description: "hipcms/cmsapi:develop is down for more than 30 seconds."
 
-  - alert: hipcms/emailservice:develop
-    expr: absent(container_memory_usage_bytes{image="hipcms/emailservice:develop"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/emailservice:develop down"
-      description: "hipcms/emailservice:develop is down for more than 30 seconds."
-
   - alert: hipcms/featuretoggle:docker-fix
     expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix"})
     for: 30s
