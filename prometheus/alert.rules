@@ -277,15 +277,6 @@ groups:
       summary: "hipcms/cmsapi:latest down"
       description: "hipcms/cmsapi:latest is down for more than 30 seconds."
 
-  - alert: hipcms/cmsapi:develop
-    expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:develop"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/cmsapi:develop down"
-      description: "hipcms/cmsapi:develop is down for more than 30 seconds."
-
   - alert: hipcms/featuretoggle:docker-fix
     expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix"})
     for: 30s
