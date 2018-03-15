@@ -33,10 +33,10 @@ scrape_configs:
     static_configs:
       - targets: ['131.234.28.181:9090']
 
-#  - job_name: 'docker-hip.cs.upb.de-machine'
-#    scrape_interval: 15s
-#    static_configs:
-#      - targets: ['131.234.28.181:9100']
+  - job_name: 'docker-hip.cs.upb.de-machine'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['131.234.28.181:9100']
 
 alerting:
   alertmanagers:
