@@ -41,6 +41,15 @@ groups:
       summary: "Server storage is almost full"
       description: "DevOps Server storage usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
 
+  - alert: DockerHiP_high_storage_load
+    expr: (node_filesystem_size{device="/dev/sda1",fstype="ext4",instance="nodeexporter:9200",mountpoint="/rootfs"} - node_filesystem_free{device="/dev/sda1",fstype="ext4",instance="nodeexporter:9100",job="nodeexporter",mountpoint="/rootfs"}) / node_filesystem_size{device="/dev/sda1",fstype="ext4",instance="nodeexporter:9100",job="nodeexporter",mountpoint="/rootfs"}  * 100 > 85
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Server storage is almost full"
+      description: "DockerHiP Server storage usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
+
       
 - name: containers
   rules:
