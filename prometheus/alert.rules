@@ -41,6 +41,15 @@ groups:
       summary: "Server storage is almost full"
       description: "DevOps Server storage usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
 
+  - alert: DockerHiP_high_memory_load
+    expr: (sum(node_memory_MemTotal{instance="131.234.28.181:9100"}) - sum(node_memory_MemFree{instance="131.234.28.181:9100"} + node_memory_Buffers{instance="131.234.28.181:9100"} + node_memory_Cached{instance="131.234.28.181:9100"}) ) / sum(node_memory_MemTotal{instance="131.234.28.181:9100"}) * 100 > 85
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "DockerHiP Server memory is almost full"
+      description: "DockerHiP Server memory usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
+      
   - alert: DockerHiP_high_storage_load
     expr: (node_filesystem_size{device="/dev/sda1",fstype="ext4",instance="131.234.28.181:9100",mountpoint="/rootfs"} - node_filesystem_free{device="/dev/sda1",fstype="ext4",instance="131.234.28.181:9100",mountpoint="/rootfs"}) / node_filesystem_size{device="/dev/sda1",fstype="ext4", instance="131.234.28.181:9100",mountpoint="/rootfs"}  * 100 > 85
     for: 30s
