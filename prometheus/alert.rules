@@ -42,7 +42,7 @@ groups:
       description: "DevOps Server storage usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
 
 - alert: DockerHip_high_cpu_load
-    expr: node_load1{instance="131.234.28.181:9100",job="docker-hip.cs.upb.de-machine"} > 1.5
+    expr: node_load1{instance="131.234.28.181:9100"} > 1.5
     for: 30s
     labels:
       severity: warning
