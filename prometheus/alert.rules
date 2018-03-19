@@ -80,6 +80,15 @@ groups:
       summary: "Graylog down"
       description: "Graylog container is down for more than 30 seconds."
 
+  - alert: elasticsearch:2
+    expr: absent(container_memory_usage_bytes{image="elasticsearch:2"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "elasticsearch:2 down"
+      description: "elasticsearch:2 is down for more than 30 seconds."      
+      
   - alert: hipcms/datastore:test_down
     expr: absent(container_memory_usage_bytes{image="hipcms/datastore:test"})
     for: 30s
@@ -250,4 +259,3 @@ groups:
     annotations:
       summary: "hipcms/angularapp:test down"
       description: "hipcms/angularapp:test is down for more than 30 seconds."
-
