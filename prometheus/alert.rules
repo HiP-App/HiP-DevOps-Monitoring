@@ -241,3 +241,13 @@ groups:
     annotations:
       summary: "hipcms/featuretoggle:docker-fix-public down"
       description: "hipcms/featuretoggle:docker-fix-public is down for more than 30 seconds."
+      
+  - alert: hipcms/angularapp:test_down
+    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:test"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/angularapp:test down"
+      description: "hipcms/angularapp:test is down for more than 30 seconds."
+
