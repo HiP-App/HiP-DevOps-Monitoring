@@ -134,42 +134,6 @@ groups:
       summary: "hipcms/datastore:latest down"
       description: "hipcms/datastore:latest is down for more than 30 seconds."
 
-  - alert: hipcms/datastore:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/datastore:staging down"
-      description: "hipcms/datastore:staging is down for more than 30 seconds."
-
-  - alert: hipcms/thumbnailservice:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/thumbnailservice:staging down"
-      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
-
-  - alert: hipcms/angularapp:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/angularapp:staging down"
-      description: "hipcms/angularapp:staging is down for more than 30 seconds."
-
-  - alert: hipcms/userstore:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/userstore:staging down"
-      description: "hipcms/userstore:staging is down for more than 30 seconds."
-
   - alert: hipcms/thumbnailservice:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:latest"})
     for: 30s
@@ -241,15 +205,6 @@ groups:
     annotations:
       summary: "hipcms/emailservice:develop down"
       description: "hipcms/emailservice:develop is down for more than 30 seconds."
-
-  - alert: hipcms/thumbnailservice:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/thumbnailservice:staging down"
-      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
 
   - alert: hipcms/angularapp:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:latest"})
