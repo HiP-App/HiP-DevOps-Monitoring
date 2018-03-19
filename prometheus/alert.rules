@@ -134,24 +134,6 @@ groups:
       summary: "hipcms/datastore:latest down"
       description: "hipcms/datastore:latest is down for more than 30 seconds."
 
-  - alert: hipcms/emailservice:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/emailservice:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/emailservice:staging down"
-      description: "hipcms/emailservice:staging is down for more than 30 seconds."
-
-  - alert: hipcms/achievements:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/achievements:staging down"
-      description: "hipcms/achievements:staging is down for more than 30 seconds."
-
   - alert: hipcms/datastore:staging
     expr: absent(container_memory_usage_bytes{image="hipcms/datastore:staging"})
     for: 30s
@@ -313,15 +295,6 @@ groups:
     annotations:
       summary: "hipcms/featuretoggle:docker-fix down"
       description: "hipcms/featuretoggle:docker-fix is down for more than 30 seconds."
-
-  - alert: hipcms/thumbnailservice:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/thumbnailservice:staging down"
-      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
 
   - alert: hipcms/featuretoggle:docker-fix-public
     expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix-public"})
