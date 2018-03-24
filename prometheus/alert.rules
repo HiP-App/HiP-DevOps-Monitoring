@@ -96,7 +96,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/datastore:test down"
-      description: "hipcms/datastore:test is down for more than 30 seconds."
+      description: "hipcms/datastore:test container is down for more than 30 seconds."
 
   - alert: hipcms/userstore:test_down
     expr: absent(container_memory_usage_bytes{image="hipcms/userstore:test"})
@@ -105,7 +105,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:test down"
-      description: "hipcms/userstore:test is down for more than 30 seconds."
+      description: "hipcms/userstore:test container is down for more than 30 seconds."
 
   - alert: hipcms/thumbnailservice:test_down
     expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:test"})
@@ -114,7 +114,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/thumbnailservice:test down"
-      description: "hipcms/thumbnailservice:test is down for more than 30 seconds."
+      description: "hipcms/thumbnailservice:test container is down for more than 30 seconds."
 
   - alert: hipcms/achievements:test_down
     expr: absent(container_memory_usage_bytes{image="hipcms/achievements:test"})
@@ -123,7 +123,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/achievements:test down"
-      description: "hipcms/achievements:test is down for more than 30 seconds."
+      description: "hipcms/achievements:test container is down for more than 30 seconds."
 
   - alert: hipcms/datastore:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/datastore:latest"})
@@ -132,7 +132,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/datastore:latest down"
-      description: "hipcms/datastore:latest is down for more than 30 seconds."
+      description: "hipcms/datastore:latest container is down for more than 30 seconds."
 
   - alert: hipcms/thumbnailservice:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:latest"})
@@ -141,7 +141,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/thumbnailservice:latest down"
-      description: "hipcms/thumbnailservice:latest is down for more than 30 seconds."
+      description: "hipcms/thumbnailservice:latest container is down for more than 30 seconds."
 
   - alert: hipcms/angularapp:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:latest"})
@@ -150,7 +150,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/angularapp:latest down"
-      description: "hipcms/angularapp:latest is down for more than 30 seconds."
+      description: "hipcms/angularapp:latest container is down for more than 30 seconds."
 
   - alert: hipcms/achievements:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/achievements:latest"})
@@ -159,7 +159,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/achievements:latest down"
-      description: "hipcms/achievements:latest is down for more than 30 seconds."
+      description: "hipcms/achievements:latest container is down for more than 30 seconds."
 
   - alert: hipcms/userstore:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/userstore:latest"})
@@ -168,7 +168,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:latest down"
-      description: "hhipcms/userstore:latest is down for more than 30 seconds."
+      description: "hhipcms/userstore:latest container is down for more than 30 seconds."
 
   - alert: hipcms/cmsapi:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:latest"})
@@ -177,7 +177,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/cmsapi:latest down"
-      description: "hipcms/cmsapi:latest is down for more than 30 seconds."
+      description: "hipcms/cmsapi:latest container is down for more than 30 seconds."
 
   - alert: hipcms/thumbnailservice:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:latest"})
@@ -186,7 +186,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/thumbnailservice:latest down"
-      description: "hipcms/thumbnailservice:latest is down for more than 30 seconds."
+      description: "hipcms/thumbnailservice:latest container is down for more than 30 seconds."
 
   - alert: hipcms/cmsapi:develop
     expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:develop"})
@@ -195,7 +195,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/cmsapi:develop down"
-      description: "hipcms/cmsapi:develop is down for more than 30 seconds."
+      description: "hipcms/cmsapi:develop container is down for more than 30 seconds."
 
   - alert: hipcms/angularapp:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:latest"})
@@ -204,7 +204,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/angularapp:latest down"
-      description: "hipcms/angularapp:latest is down for more than 30 seconds."
+      description: "hipcms/angularapp:latest container is down for more than 30 seconds."
 
   - alert: hipcms/achievements:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/achievements:latest"})
@@ -213,7 +213,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/achievements:latest down"
-      description: "hipcms/achievements:latest is down for more than 30 seconds."
+      description: "hipcms/achievements:latest container is down for more than 30 seconds."
 
   - alert: hipcms/userstore:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/userstore:latest"})
@@ -222,7 +222,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:latest down"
-      description: "hipcms/userstore:latest is down for more than 30 seconds."
+      description: "hipcms/userstore:latest container is down for more than 30 seconds."
 
   - alert: hipcms/cmsapi:latest
     expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:latest"})
@@ -231,7 +231,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/cmsapi:latest down"
-      description: "hipcms/cmsapi:latest is down for more than 30 seconds."
+      description: "hipcms/cmsapi:latest container is down for more than 30 seconds."
 
   - alert: hipcms/featuretoggle:docker-fix
     expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix"})
@@ -240,7 +240,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/featuretoggle:docker-fix down"
-      description: "hipcms/featuretoggle:docker-fix is down for more than 30 seconds."
+      description: "hipcms/featuretoggle:docker-fix container is down for more than 30 seconds."
 
   - alert: hipcms/featuretoggle:docker-fix-public
     expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix-public"})
@@ -249,7 +249,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/featuretoggle:docker-fix-public down"
-      description: "hipcms/featuretoggle:docker-fix-public is down for more than 30 seconds."
+      description: "hipcms/featuretoggle:docker-fix-public container is down for more than 30 seconds."
 
   - alert: hipcms/angularapp:test_down
     expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:test"})
@@ -258,7 +258,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/angularapp:test down"
-      description: "hipcms/angularapp:test is down for more than 30 seconds."
+      description: "hipcms/angularapp:test container is down for more than 30 seconds."
       
   - alert: hipcms/datastore:staging
     expr: absent(container_memory_usage_bytes{image="hipcms/datastore:staging"})
@@ -267,7 +267,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/datastore:staging"
-      description: "hipcms/datastore:staging is down for more than 30 seconds."
+      description: "hipcms/datastore:staging container is down for more than 30 seconds."
       
   - alert: hipcms/achievements:staging
     expr: absent(container_memory_usage_bytes{image="hipcms/achievements:staging"})
@@ -276,7 +276,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/achievements:staging"
-      description: "hipcms/achievements:staging is down for more than 30 seconds."
+      description: "hipcms/achievements:staging container is down for more than 30 seconds."
       
   - alert: hipcms/userstore:staging
     expr: absent(container_memory_usage_bytes{image="hipcms/userstore:staging"})
@@ -285,7 +285,7 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/userstore:staging"
-      description: "hipcms/userstore:staging is down for more than 30 seconds."
+      description: "hipcms/userstore:staging container is down for more than 30 seconds."
       
   - alert: hipcms/thumbnailservice:staging
     expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
@@ -294,4 +294,4 @@ groups:
       severity: critical
     annotations:
       summary: "hipcms/thumbnailservice:staging"
-      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
+      description: "hipcms/thumbnailservice:staging container is down for more than 30 seconds."
