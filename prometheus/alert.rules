@@ -259,3 +259,39 @@ groups:
     annotations:
       summary: "hipcms/angularapp:test down"
       description: "hipcms/angularapp:test is down for more than 30 seconds."
+      
+  - alert: hipcms/datastore:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/datastore:staging"
+      description: "hipcms/datastore:staging is down for more than 30 seconds."
+      
+  - alert: hipcms/achievements:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/achievements:staging"
+      description: "hipcms/achievements:staging is down for more than 30 seconds."
+      
+  - alert: hipcms/userstore:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/userstore:staging"
+      description: "hipcms/userstore:staging is down for more than 30 seconds."
+      
+  - alert: hipcms/thumbnailservice:staging
+    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "hipcms/thumbnailservice:staging"
+      description: "hipcms/thumbnailservice:staging is down for more than 30 seconds."
