@@ -97,8 +97,8 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=${ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
-      #- GF_SERVER_DOMAIN=devops-hip.cs.upb.de
-      #- GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s:/grafana
+      - GF_SERVER_DOMAIN=devops-hip.cs.upb.de
+      - GF_SERVER_ROOT_URL=%(protocol)s://%(domain)s:/grafana
       - GF_USERS_ALLOW_SIGN_UP=false
     restart: unless-stopped
     expose:
