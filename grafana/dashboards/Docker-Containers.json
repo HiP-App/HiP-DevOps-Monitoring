@@ -202,7 +202,8 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "machine_cpu_cores",
+              "expr": "machine_cpu_cores{instance=\"131.234.28.181:9090\",job=\"docker-hip.cs.upb.de-docker-container\"}",
+              "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "",
@@ -367,6 +368,7 @@
           "targets": [
             {
               "expr": "sum(container_memory_usage_bytes{image!=\"\"})",
+              "format": "time_series",
               "interval": "10s",
               "intervalFactor": 2,
               "legendFormat": "",
@@ -449,7 +451,9 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "(node_filesystem_size{fstype=\"aufs\"} - node_filesystem_free{fstype=\"aufs\"}) / node_filesystem_size{fstype=\"aufs\"}  * 100",
+              "expr": "(node_filesystem_size{device=\"/dev/sda1\",fstype=\"ext4\",mountpoint=\"/rootfs\"} - node_filesystem_free{device=\"/dev/sda1\",fstype=\"ext4\"}) / node_filesystem_size{device=\"/dev/sda1\",fstype=\"ext4\"}  * 100",
+              "format": "time_series",
+              "hide": false,
               "interval": "30s",
               "intervalFactor": 1,
               "legendFormat": "",
@@ -1347,5 +1351,5 @@
   },
   "timezone": "browser",
   "title": "Docker Containers",
-  "version": 1
+  "version": 4
 }
