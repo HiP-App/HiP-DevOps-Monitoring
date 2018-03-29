@@ -15,8 +15,8 @@ groups:
 - name: host
   rules:
   - alert: DevOps_high_cpu_load
-    expr: node_load1{instance="nodeexporter:9100",job="nodeexporter"} > 1.5
-    for: 30s
+    expr: node_load1{instance="nodeexporter:9100",job="nodeexporter"} > 3.0
+    for: 60s
     labels:
       severity: warning
     annotations:
@@ -42,8 +42,8 @@ groups:
       description: "DevOps Server storage usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
 
   - alert: DockerHiP_high_cpu_load
-    expr: node_load1{instance="131.234.28.181:9100"} > 1.5
-    for: 30s
+    expr: node_load1{instance="131.234.28.181:9100"} > 5.0
+    for: 60s
     labels:
       severity: warning
     annotations:
