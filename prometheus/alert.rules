@@ -125,77 +125,77 @@ groups:
       summary: "achievements:test down"
       description: "achievements:test container is down for more than 30 seconds."
 
-  - alert: datastore:latest
-    expr: absent(container_memory_usage_bytes{image="datastore:latest"})
+  - alert: datastore:master
+    expr: absent(container_memory_usage_bytes{image="datastore:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "datastore:latest down"
-      description: "datastore:latest container is down for more than 30 seconds."
+      summary: "datastore:master down"
+      description: "datastore:master container is down for more than 30 seconds."
 
-  - alert: thumbnailservice:latest
-    expr: absent(container_memory_usage_bytes{image="thumbnailservice:latest"})
+  - alert: thumbnailservice:master
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "thumbnailservice:latest down"
-      description: "thumbnailservice:latest container is down for more than 30 seconds."
+      summary: "thumbnailservice:master down"
+      description: "thumbnailservice:master container is down for more than 30 seconds."
 
-  - alert: angularapp:latest
-    expr: absent(container_memory_usage_bytes{image="angularapp:latest"})
+  - alert: angularapp:master
+    expr: absent(container_memory_usage_bytes{image="angularapp:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "angularapp:latest down"
-      description: "angularapp:latest container is down for more than 30 seconds."
+      summary: "angularapp:master down"
+      description: "angularapp:master container is down for more than 30 seconds."
 
-  - alert: achievements:latest
-    expr: absent(container_memory_usage_bytes{image="achievements:latest"})
+  - alert: achievements:master
+    expr: absent(container_memory_usage_bytes{image="achievements:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "achievements:latest down"
-      description: "achievements:latest container is down for more than 30 seconds."
+      summary: "achievements:master down"
+      description: "achievements:master container is down for more than 30 seconds."
 
-  - alert: userstore:latest
-    expr: absent(container_memory_usage_bytes{image="userstore:latest"})
+  - alert: userstore:master
+    expr: absent(container_memory_usage_bytes{image="userstore:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "userstore:latest down"
-      description: "userstore:latest container is down for more than 30 seconds."
+      summary: "userstore:master down"
+      description: "userstore:master container is down for more than 30 seconds."
 
-  - alert: cmsapi:latest
-    expr: absent(container_memory_usage_bytes{image="cmsapi:latest"})
+  - alert: cmsapi:master
+    expr: absent(container_memory_usage_bytes{image="cmsapi:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "cmsapi:latest down"
-      description: "cmsapi:latest container is down for more than 30 seconds."
+      summary: "cmsapi:master down"
+      description: "cmsapi:master container is down for more than 30 seconds."
 
-  - alert: thumbnailservice:latest
-    expr: absent(container_memory_usage_bytes{image="thumbnailservice:latest"})
+  - alert: thumbnailservice:master
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "thumbnailservice:latest down"
-      description: "thumbnailservice:latest container is down for more than 30 seconds."
+      summary: "thumbnailservice:master down"
+      description: "thumbnailservice:master container is down for more than 30 seconds."
 
-  - alert: cmsapi:develop
-    expr: absent(container_memory_usage_bytes{image="cmsapi:develop"})
+  - alert: cmsapi:test
+    expr: absent(container_memory_usage_bytes{image="cmsapi:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "cmsapi:develop down"
-      description: "cmsapi:develop container is down for more than 30 seconds."
+      summary: "cmsapi:test down"
+      description: "cmsapi:test container is down for more than 30 seconds."
 
   - alert: featuretoggle:docker-fix
     expr: absent(container_memory_usage_bytes{image="featuretoggle:docker-fix"})
