@@ -89,209 +89,173 @@ groups:
       summary: "elasticsearch:2 down"
       description: "elasticsearch:2 is down for more than 30 seconds."      
       
-  - alert: hipcms/datastore:test_down
-    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:test"})
+  - alert: datastore:test_down
+    expr: absent(container_memory_usage_bytes{image="datastore:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/datastore:test down"
-      description: "hipcms/datastore:test container is down for more than 30 seconds."
+      summary: "datastore:test down"
+      description: "datastore:test container is down for more than 30 seconds."
 
-  - alert: hipcms/userstore:test_down
-    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:test"})
+  - alert: userstore:test_down
+    expr: absent(container_memory_usage_bytes{image="userstore:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/userstore:test down"
-      description: "hipcms/userstore:test container is down for more than 30 seconds."
+      summary: "userstore:test down"
+      description: "userstore:test container is down for more than 30 seconds."
 
-  - alert: hipcms/thumbnailservice:test_down
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:test"})
+  - alert: thumbnailservice:test_down
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/thumbnailservice:test down"
-      description: "hipcms/thumbnailservice:test container is down for more than 30 seconds."
+      summary: "thumbnailservice:test down"
+      description: "thumbnailservice:test container is down for more than 30 seconds."
 
-  - alert: hipcms/achievements:test_down
-    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:test"})
+  - alert: achievements:test_down
+    expr: absent(container_memory_usage_bytes{image="achievements:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/achievements:test down"
-      description: "hipcms/achievements:test container is down for more than 30 seconds."
+      summary: "achievements:test down"
+      description: "achievements:test container is down for more than 30 seconds."
 
-  - alert: hipcms/datastore:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:latest"})
+  - alert: datastore:latest
+    expr: absent(container_memory_usage_bytes{image="datastore:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/datastore:latest down"
-      description: "hipcms/datastore:latest container is down for more than 30 seconds."
+      summary: "datastore:latest down"
+      description: "datastore:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/thumbnailservice:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:latest"})
+  - alert: thumbnailservice:latest
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/thumbnailservice:latest down"
-      description: "hipcms/thumbnailservice:latest container is down for more than 30 seconds."
+      summary: "thumbnailservice:latest down"
+      description: "thumbnailservice:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/angularapp:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:latest"})
+  - alert: angularapp:latest
+    expr: absent(container_memory_usage_bytes{image="angularapp:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/angularapp:latest down"
-      description: "hipcms/angularapp:latest container is down for more than 30 seconds."
+      summary: "angularapp:latest down"
+      description: "angularapp:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/achievements:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:latest"})
+  - alert: achievements:latest
+    expr: absent(container_memory_usage_bytes{image="achievements:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/achievements:latest down"
-      description: "hipcms/achievements:latest container is down for more than 30 seconds."
+      summary: "achievements:latest down"
+      description: "achievements:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/userstore:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:latest"})
+  - alert: userstore:latest
+    expr: absent(container_memory_usage_bytes{image="userstore:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/userstore:latest down"
-      description: "hhipcms/userstore:latest container is down for more than 30 seconds."
+      summary: "userstore:latest down"
+      description: "userstore:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/cmsapi:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:latest"})
+  - alert: cmsapi:latest
+    expr: absent(container_memory_usage_bytes{image="cmsapi:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/cmsapi:latest down"
-      description: "hipcms/cmsapi:latest container is down for more than 30 seconds."
+      summary: "cmsapi:latest down"
+      description: "cmsapi:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/thumbnailservice:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:latest"})
+  - alert: thumbnailservice:latest
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:latest"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/thumbnailservice:latest down"
-      description: "hipcms/thumbnailservice:latest container is down for more than 30 seconds."
+      summary: "thumbnailservice:latest down"
+      description: "thumbnailservice:latest container is down for more than 30 seconds."
 
-  - alert: hipcms/cmsapi:develop
-    expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:develop"})
+  - alert: cmsapi:develop
+    expr: absent(container_memory_usage_bytes{image="cmsapi:develop"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/cmsapi:develop down"
-      description: "hipcms/cmsapi:develop container is down for more than 30 seconds."
+      summary: "cmsapi:develop down"
+      description: "cmsapi:develop container is down for more than 30 seconds."
 
-  - alert: hipcms/angularapp:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:latest"})
+  - alert: featuretoggle:docker-fix
+    expr: absent(container_memory_usage_bytes{image="featuretoggle:docker-fix"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/angularapp:latest down"
-      description: "hipcms/angularapp:latest container is down for more than 30 seconds."
+      summary: "featuretoggle:docker-fix down"
+      description: "featuretoggle:docker-fix container is down for more than 30 seconds."
 
-  - alert: hipcms/achievements:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:latest"})
+  - alert: featuretoggle:docker-fix-public
+    expr: absent(container_memory_usage_bytes{image="featuretoggle:docker-fix-public"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/achievements:latest down"
-      description: "hipcms/achievements:latest container is down for more than 30 seconds."
+      summary: "featuretoggle:docker-fix-public down"
+      description: "featuretoggle:docker-fix-public container is down for more than 30 seconds."
 
-  - alert: hipcms/userstore:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:latest"})
+  - alert: angularapp:test_down
+    expr: absent(container_memory_usage_bytes{image="angularapp:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/userstore:latest down"
-      description: "hipcms/userstore:latest container is down for more than 30 seconds."
-
-  - alert: hipcms/cmsapi:latest
-    expr: absent(container_memory_usage_bytes{image="hipcms/cmsapi:latest"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/cmsapi:latest down"
-      description: "hipcms/cmsapi:latest container is down for more than 30 seconds."
-
-  - alert: hipcms/featuretoggle:docker-fix
-    expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/featuretoggle:docker-fix down"
-      description: "hipcms/featuretoggle:docker-fix container is down for more than 30 seconds."
-
-  - alert: hipcms/featuretoggle:docker-fix-public
-    expr: absent(container_memory_usage_bytes{image="hipcms/featuretoggle:docker-fix-public"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/featuretoggle:docker-fix-public down"
-      description: "hipcms/featuretoggle:docker-fix-public container is down for more than 30 seconds."
-
-  - alert: hipcms/angularapp:test_down
-    expr: absent(container_memory_usage_bytes{image="hipcms/angularapp:test"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "hipcms/angularapp:test down"
-      description: "hipcms/angularapp:test container is down for more than 30 seconds."
+      summary: "angularapp:test down"
+      description: "angularapp:test container is down for more than 30 seconds."
       
-  - alert: hipcms/datastore:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/datastore:staging"})
+  - alert: datastore:staging
+    expr: absent(container_memory_usage_bytes{image="datastore:staging"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/datastore:staging"
-      description: "hipcms/datastore:staging container is down for more than 30 seconds."
+      summary: "datastore:staging"
+      description: "datastore:staging container is down for more than 30 seconds."
       
-  - alert: hipcms/achievements:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/achievements:staging"})
+  - alert: achievements:staging
+    expr: absent(container_memory_usage_bytes{image="achievements:staging"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/achievements:staging"
-      description: "hipcms/achievements:staging container is down for more than 30 seconds."
+      summary: "achievements:staging"
+      description: "achievements:staging container is down for more than 30 seconds."
       
-  - alert: hipcms/userstore:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/userstore:staging"})
+  - alert: userstore:staging
+    expr: absent(container_memory_usage_bytes{image="userstore:staging"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/userstore:staging"
-      description: "hipcms/userstore:staging container is down for more than 30 seconds."
+      summary: "userstore:staging"
+      description: "userstore:staging container is down for more than 30 seconds."
       
-  - alert: hipcms/thumbnailservice:staging
-    expr: absent(container_memory_usage_bytes{image="hipcms/thumbnailservice:staging"})
+  - alert: thumbnailservice:staging
+    expr: absent(container_memory_usage_bytes{image="thumbnailservice:staging"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "hipcms/thumbnailservice:staging"
-      description: "hipcms/thumbnailservice:staging container is down for more than 30 seconds."
+      summary: "thumbnailservice:staging"
+      description: "thumbnailservice:staging container is down for more than 30 seconds."
