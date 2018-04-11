@@ -197,23 +197,23 @@ groups:
       summary: "cmsapi:test down"
       description: "cmsapi:test container is down for more than 30 seconds."
 
-  - alert: featuretoggle:docker-fix
-    expr: absent(container_memory_usage_bytes{image="featuretoggle:docker-fix"})
+  - alert: featuretoggle:test
+    expr: absent(container_memory_usage_bytes{image="featuretoggle:test"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "featuretoggle:docker-fix down"
-      description: "featuretoggle:docker-fix container is down for more than 30 seconds."
+      summary: "featuretoggle:test down"
+      description: "featuretoggle:test container is down for more than 30 seconds."
 
-  - alert: featuretoggle:docker-fix-public
-    expr: absent(container_memory_usage_bytes{image="featuretoggle:docker-fix-public"})
+  - alert: featuretoggle:master
+    expr: absent(container_memory_usage_bytes{image="featuretoggle:master"})
     for: 30s
     labels:
       severity: critical
     annotations:
-      summary: "featuretoggle:docker-fix-public down"
-      description: "featuretoggle:docker-fix-public container is down for more than 30 seconds."
+      summary: "featuretoggle:master down"
+      description: "featuretoggle:master container is down for more than 30 seconds."
 
   - alert: angularapp:test_down
     expr: absent(container_memory_usage_bytes{image="angularapp:test"})
@@ -223,39 +223,3 @@ groups:
     annotations:
       summary: "angularapp:test down"
       description: "angularapp:test container is down for more than 30 seconds."
-      
-  - alert: datastore:staging
-    expr: absent(container_memory_usage_bytes{image="datastore:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "datastore:staging"
-      description: "datastore:staging container is down for more than 30 seconds."
-      
-  - alert: achievements:staging
-    expr: absent(container_memory_usage_bytes{image="achievements:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "achievements:staging"
-      description: "achievements:staging container is down for more than 30 seconds."
-      
-  - alert: userstore:staging
-    expr: absent(container_memory_usage_bytes{image="userstore:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "userstore:staging"
-      description: "userstore:staging container is down for more than 30 seconds."
-      
-  - alert: thumbnailservice:staging
-    expr: absent(container_memory_usage_bytes{image="thumbnailservice:staging"})
-    for: 30s
-    labels:
-      severity: critical
-    annotations:
-      summary: "thumbnailservice:staging"
-      description: "thumbnailservice:staging container is down for more than 30 seconds."
