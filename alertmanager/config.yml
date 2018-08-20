@@ -2,13 +2,11 @@ route:
     receiver: 'mattermost_slack'
 
 receivers:
-    - name: 'mattermost'
+    - name: 'mattermost_slack'
       slack_configs:
           - send_resolved: true
             text: "{{ .CommonAnnotations.description }}"
             api_url: 'https://mattermost-hip.cs.upb.de/hooks/hdfh39we3tdumf5hb8gmascngy'
-    - name: 'slack'
-      slack_configs:
           - send_resolved: true
             api_url: 'https://hooks.slack.com/services/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'
             text: "{{ .CommonAnnotations.description }}"
