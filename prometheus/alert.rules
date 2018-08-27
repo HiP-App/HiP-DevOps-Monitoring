@@ -225,10 +225,10 @@ groups:
       description: "angularapp:test container is down for more than 30 seconds."
 	  
   - alert: owl-prototype:develop
-	expr: absent(container_memory_usage_bytes{image="owl-prototype:develop"})
-	for: 30s
-	labels:
-		severity: critical
-	annotations:
-		summary: "owl-prototype:develop down"
-		description: "owl-prototype:develop container is down for more than 30 seconds."
+    expr: absent(container_memory_usage_bytes{image="owl-prototype:develop"})
+    for: 30s
+    labels:
+      severity: critical
+    annotations:
+      summary: "owl-prototype:develop down"
+      description: "owl-prototype:develop container is down for more than 30 seconds."
