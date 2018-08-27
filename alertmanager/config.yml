@@ -9,5 +9,16 @@ receivers:
             api_url: 'https://mattermost-hip.cs.upb.de/hooks/hdfh39we3tdumf5hb8gmascngy'
           - send_resolved: true
             api_url: 'https://hooks.slack.com/services/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'
-            text: "{{ .CommonAnnotations.description }}"
             channel: '#devops_alerts'
+            color: '{{ if eq .Status "firing" }}danger{{ else }}good{{ end }}'
+            title: '{{ template "slack.default.title" . }}'
+            title_link: '{{ template "slack.default.titlelink" . }}'
+            pretext: '{{ .CommonAnnotations.summary }}'
+            text: |-
+                {{ range .Alerts }}
+                    *Alert:* {{ .Annotations.summary }} - `{{ .Labels.severity }}`
+                    *Description:* {{ .Annotations.description }}
+                    *Details:*
+                    {{ range .Labels.SortedPairs }} • *{{ .Name }}:* `{{ .Value }}`
+                    {{ end }}
+                {{ end }}
